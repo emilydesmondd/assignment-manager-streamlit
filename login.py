@@ -1,5 +1,5 @@
 import streamlit as st
-from project.auth import verify_user, get_user_email
+from auth import verify_user, get_user_email
 
 def render_login(go):
     st.subheader("Login")
