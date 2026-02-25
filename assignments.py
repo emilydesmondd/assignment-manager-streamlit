@@ -32,3 +32,7 @@ with st.expander("Assignment Details", expanded=True):
     st.markdown(f"**Description:** {description_input}")
     st.markdown(f"**Type:** {assignment_type_input}")
     st.markdown(f"**Due Date:** {due_date_input}")
+
+btn_save = st.button("Save Assignment", width='stretch')
+if btn_save:
+    st.success("Assignment saved!")
