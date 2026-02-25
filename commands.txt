@@ -1,7 +1,26 @@
-pages: 
-your_working_directory/
-├── pages/
-│   ├── a_page.py
-│   └── another_page.py
-└── your_homepage.py
-
+Concept A: Input Widgets
+Streamlit provides widgets for every data type:
+• st.text_input: Single line text.
+• st.number_input: numeric values (int/float).
+• st.text_area: Multi-line paragraphs.
+• st.date_input: Date pickers.
+• st.selectbox: Dropdowns.
+• st.checkbox: boolean True/False.
+• st.file_uploader: Handling files.
+Concept B: Layout (Columns & Containers)
+A professional app groups related information.
+• st.columns: Splits the screen horizontally.
+• st.container: logical grouping of elements (often with a border).
+Concept C: Buttons & Feedback
+• st.button: Triggers an event once.
+• st.spinner: Shows loading state.
+• st.success/warning/error: Feedback messages.
+Concept: st.sidebar
+The with st.sidebar: block places any widget (buttons, headers, inputs) into the
+collapsible side menu.
+Final Review: The Mental Model
+1. Rerun Cycle: Streamlit reruns the entire script from top to bottom whenever an
+interaction occurs.
+2. Persistence: Variables reset on rerun unless stored in st.session_state or a file
+(like assignments.json).
+3. Control Flow: The UI is just a reflection of the current variables and if statements.
