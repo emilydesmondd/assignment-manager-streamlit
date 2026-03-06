@@ -1,18 +1,1 @@
-[
-    {
-        "id": "1",
-        "email": "admin@school.edu",
-        "full_name": "System Admin",
-        "password": "123ssag@43AE",
-        "role": "Admin",
-        "registered_at": "2026-03-06 10:29:46.940382"
-    },
-    {
-        "id": "1aeea49b-60dd-473f-92ed-41570c9970e8",
-        "email": "emdesmo@udel.edu",
-        "full_name": "Emily Desmond",
-        "password": "testing",
-        "role": "Instructor",
-        "registered_at": "2026-03-06 10:32:22.918182"
-    }
-]
+
