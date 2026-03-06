@@ -21,7 +21,7 @@ else:
             "last_name": "Admin",
             "password": "123ssag@43AE",
             "role": "Admin",
-            "registered_at": str(datetime.now())
+            "registered_at": '...'
         }
     ]
     with open(json_file, "w") as f:
