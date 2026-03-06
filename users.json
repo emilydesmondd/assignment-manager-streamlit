@@ -1,1 +1,15 @@
+<<<<<<< HEAD
 
+=======
+[
+    {
+        "id": "1",
+        "email": "admin@school.edu",
+        "first_name": "System",
+        "last_name": "Admin",
+        "password": "123ssag@43AE",
+        "role": "Admin",
+        "registered_at": "2026-03-06 10:29:46.940382"
+    }
+]
+>>>>>>> c2d1316 (new)
