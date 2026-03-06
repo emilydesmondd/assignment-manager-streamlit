@@ -11,9 +11,9 @@ st.markdown("# 🤝 Network Manager")
 st.markdown("Turn conversations into connections.")
 st.markdown("---")
 
-# session defaults
+
 if "view" not in st.session_state:
-    st.session_state.view = "signup"   # signup | login
+    st.session_state.view = "signup" 
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 if "user_name" not in st.session_state:
@@ -25,7 +25,7 @@ def go(view: str):
     st.session_state.view = view
     st.rerun()
 
-# If logged in → show the real app (sidebar inside homepage.py)
+
 if st.session_state.logged_in:
     render_homepage()
     st.stop()
