@@ -9,6 +9,19 @@ st.set_page_config(page_title="Course Manager", layout="centered")
 
 json_file = Path("users.json")
 
+if 'logged_in' not in st.session_state:
+    st.session_state['logged_in'] = False
+
+if 'user' not in st.session_state:
+    st.session_state['user'] = None
+
+if 'page' not in st.session_state:
+    st.session_state['page'] = 'login'
+
+if 'role' not in st.session_state:
+    st.session_state['role'] = None
+
+
 if json_file.exists():
     with open(json_file, "r", encoding="utf-8") as f:
         users = json.load(f)
@@ -98,7 +111,27 @@ elif page == "Login":
     st.subheader("Current User Database")
     st.dataframe(users)
 
-#json_path = Path("users.json")
-#if json_path.exists():
-#    with open(json_path, "r", encoding="utf-8") as f:
-#        users = json.load(f)
+with st.sidebar:
+    st.title("Sidebar")
+    if st.session_state["logged_in"] and st.session_state["user"] is not None:
+        st.write(f"Logged in as: {st.session_state['user']['username']}")
+    else:
+        st.write("Not logged in.")
+
+if st.session_state['role'] == "Admin":
+    st.sidebar.title("Admin Panel")
+    st.sidebar.write("Here you can manage users and content.")
+
+if st.session_state['role'] == "Instructor":      
+    st.rerunr.title("Instructor Resources")
+
+if st.button('Log Out'):
+    with st.spinner("Logging out..."):
+        time.sleep(5)
+    st.session_state['logged_in'] = False
+    st.session_state['user'] = None
+    st.session_state['role'] = None 
+    st.success("Logged out successfully!")
+    st.rerun()
+
+
