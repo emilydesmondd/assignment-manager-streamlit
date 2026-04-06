@@ -1,7 +1,7 @@
 import streamlit as st
-from auth import init_db, create_user
-from login import render_login
-from homepage import render_homepage
+from apps.auth import init_db, create_user
+from apps.login import render_login
+from apps.homepage import render_homepage
 
 st.set_page_config(page_title="Network Manager", layout="wide")
 

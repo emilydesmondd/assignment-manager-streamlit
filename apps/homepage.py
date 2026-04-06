@@ -2,7 +2,7 @@
 import streamlit as st
 import base64
 
-from auth import (
+from apps.auth import (
     add_connection,
     list_connections,
     delete_connection,  
