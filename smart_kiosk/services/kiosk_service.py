@@ -30,7 +30,7 @@ def place_order(inventory: List[Dict], orders: List[Dict], item_id: str, quantit
 
     total_price = item["price"] * quantity
     new_order = {
-        "order_id": f"ord_{str(uuid.uuid4())[:8]}",
+        "order_id": f"{str(uuid.uuid4())}",
         "customer_id": customer_id,
         "item_id": item_id,
         "item_name": item["name"],
