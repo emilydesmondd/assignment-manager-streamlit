@@ -14,7 +14,6 @@ st.set_page_config(
 st.title("Course Management App")
 st.divider()
 
-
 # Placeholder Default Data
 assignments = [
     {
